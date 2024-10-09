@@ -3,7 +3,9 @@
 </script>
 
 <template>
-  <MyHello />
+  <MyHello title="Кроссовки Puma" :price="19500" is-added />
+  <MyHello isAdded />
+  <MyHello :isAdded="false"/>
 </template>
 
 <style scoped>

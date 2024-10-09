@@ -1,31 +1,23 @@
-<!-- Composition API -->
 <script setup>
-import {ref} from "vue"
-
-const count = ref(0);
-const text = ref(0);
-
-const increment = () => {
-  count.value++;
-}
-
-const updateCount = (e) => {
-  count.value = Number(e.target.value);
-}
+defineProps({
+  title: String,
+  price: Number,
+  isAdded: Boolean,
+});
 </script>
 
 <template>
-  <h1>Count: {{ count }}</h1>
-  <button @click="increment">+1</button>
-  <!--  Плохой пример кода -->
-  <input @input="updateCount">
-  <br>
-  <!-- Хороший пример. Из документации  -->
-  <h1>Text: {{ text }}</h1>
-  <input
-      :value="text"
-      @input="event => text = event.target.value">
+  <div class="product">
+    <h2>Товар: {{ title }}</h2>
+    <h3>Цена: {{ price }}р.</h3>
+    <h3>Добавлен в корзину: {{ isAdded ? "Да" : "Нет" }}</h3>
+  </div>
 </template>
 
-
-<style scoped></style>
+<style scoped>
+.product {
+  border: 1px solid blue;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+</style>
