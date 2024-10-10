@@ -7,9 +7,9 @@ defineProps({
 </script>
 
 <template>
-  <div class="product">
-    <h2>Товар: {{ title }}</h2>
-    <h3>Цена: {{ price }}р.</h3>
+  <div class="product m-2.5">
+    <h2 class="text-amber-600">Товар: {{ title }}</h2>
+    <h3 class="font-bold underline">Цена: {{ price }}р.</h3>
     <h3>Добавлен в корзину: {{ isAdded ? "Да" : "Нет" }}</h3>
     <slot/>  <!-- slot => аналог children из React  -->
   </div>
