@@ -4,7 +4,7 @@ import MyHello from "@/components/MyHello.vue";
 
 <template>
   <MyHello title="Кроссовки Puma" :price="19500" is-added>
-    <button>Добавить</button>
+    <button class="bg-blue-300">Добавить</button>
   </MyHello>
   <MyHello isAdded>
     <h5>Нет в наличии</h5>
